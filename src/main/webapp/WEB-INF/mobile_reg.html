@@ -1,0 +1,186 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Passport Registration Form</title>
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" />
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="assets/bootstrap/css/bootstrap-datepicker.min.css" />
+<link rel="stylesheet"
+	href="assets/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/form-elements.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- Favicon and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="assets/ico/apple-touch-icon-144-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="assets/ico/apple-touch-icon-114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="assets/ico/apple-touch-icon-72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed"
+	href="assets/ico/apple-touch-icon-57-precomposed.png" />
+
+
+
+
+
+</head>
+<body>
+	<div class="top-content">
+		<div class="inner-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text">
+						<h1>Please enter the following details</h1>
+
+					</div>
+				</div>
+
+				<div class="form-bottom">
+					<form role="form" action="mobile_reg" method="post"
+						class="registration-form">
+						<div class="form-group">
+							<label class="sr-only" for="firstName">First name</label> <input
+								type="text" name="firstName" placeholder="First name"
+								class="form-first-name form-control" id="firstName" />
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="lastName">Last name</label> <input
+								type="text" name="lastName" placeholder="Last Name"
+								class="form-last-name form-control" id="lastName" />
+						</div>
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label class="sr-only" for="street">Street</label> <input
+										type="text" name="street" placeholder="Street"
+										class="form-street form-control" id="street" />
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label class="sr-only" for="city">City</label> <input
+										type="text" name="city" placeholder="City"
+										class="form-city form-control" id="city" />
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<select class="form-control" style="height: 40px"
+										name="country">
+										<option>Select Country</option>
+										<option th:each="c : ${country}" th:value="${c.getName()}"
+											th:text="${c.getName()}">country</option>Select Country
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="form-group">
+									<select class="form-control" style="height: 40px"
+										name="flightName">
+										<option>Select Flight</option>
+										<option th:each="f : ${flight}" th:value="${f.getName()}"
+											th:text="${f.getName()}">flight</option>Select flight name
+									</select>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<div class="input-group date" data-provide="datepicker">
+										<input type="text" class="form-control" name="travelDate"
+											value="Travelling Date" style="height: 40px" />
+										<div class="input-group-addon">
+											<span class="glyphicon glyphicon-th"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-offset-1">
+								<div class="form-group">
+									<div class="input-group date" data-provide="datepicker">
+										<input type="text" class="form-control" name="visitingDate"
+											value="Airport Visiting Date" style="height: 40px" />
+										<div class="input-group-addon">
+											<span class="glyphicon glyphicon-th"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="mobileNr">Mobile Number</label> <input
+								type="text" name="mobileNr" placeholder="Mobile Number"
+								class="form-mobile form-control" id="mobileNr" />
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="email">Email</label> <input
+								type="text" name="email" placeholder="Email"
+								class="form-mobile form-control" id="email" />
+						</div>
+						
+						<div class="form-group">
+							<label class="sr-only" for="username">Username</label> <input
+								type="text" name="username" placeholder="Username"
+								class="form-username form-control" id="username" />
+						</div>
+						<div class="form-group">
+							<input type="checkbox" name="check_email" value="email"
+								class="form-check_email " id="check_email">&nbsp;Do
+							you want to be notified by <strong>Email?</strong>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" name="check_mobile" value="mobile"
+								class="form-check_mobile" id="check_mobile">&nbsp;Do
+							you want to be notified by <strong>Mobile?</strong>
+						</div>
+						<button type="submit" class="btn" style="background-color: green">Sign
+							Up!</button>
+					</form>
+
+					<br></br>
+					<div>
+						<a href="index" class="btn btn-info" role="button">Main Page</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+
+					<p>Copyright 2016 &copy; HMM-Projects. All rights reserved.</p>
+
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 	<script src="assets/js/scripts.js"></script> -->
+	<script src="assets/bootstrap/js/bootstrap-datepicker.min.js"></script>
+
+</body>
+
+
+</html>

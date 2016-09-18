@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Edit User</title>
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" />
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="assets/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/form-elements.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet"
+	href="assets/bootstrap/css/bootstrap-datepicker.min.css" />
+
+<!-- Favicon and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="assets/ico/apple-touch-icon-144-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="assets/ico/apple-touch-icon-114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="assets/ico/apple-touch-icon-72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed"
+	href="assets/ico/apple-touch-icon-57-precomposed.png" />
+
+</head>
+
+<body>
+
+	<!-- Top content -->
+	<div class="top-content">
+
+		<div class="inner-bg">
+			<div class="container">
+
+				<div class="row"></div>
+
+				<div class="row">
+
+
+					<div class="col-sm-2"></div>
+
+					<div class="col-sm-8">
+
+						<div class="form-box">
+
+							<div class="form-top">
+								<div class="form-top-left">
+									<h3>Add User</h3>
+								</div>
+								<div class="form-top-right">
+									<i class="fa fa-pencil"></i>
+								</div>
+							</div>
+							<div class="form-bottom">
+								<form role="form" action="add_user" method="post"
+									class="registration-form">
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="sr-only" for="firstName">First name</label> <input
+												type="text" name="firstName" placeholder="First name"
+												class="form-first-name form-control" id="firstName" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="lastName">Last name</label> <input
+												type="text" name="lastName" placeholder="Last Name"
+												class="form-last-name form-control" id="lastName" />
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="form-address">Address</label> <input
+												type="text" name="form-address" placeholder="Address"
+												class="form-last-name form-control" id="form-address" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="city">City</label> <input
+												type="text" name="city" placeholder="City"
+												class="form-last-name form-control" id="city" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="postalCode">PostalCode</label> <input
+												type="text" name="postalCode" placeholder="Postal Code"
+												class="form-email form-control" id="postalCode" />
+										</div>
+										<div>
+											<label class="sr-only" for="country">Country</label> <select
+												class="form-control" style="height: 50px" name="country">
+												<option th:each="c : ${country}" th:value="${c.getName()}"
+													th:text="${c.getName()}">country</option>Select Country
+											</select>
+										</div>
+										<br>
+
+
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="sr-only" for="idNumber">Id-card No.</label>
+											<input type="text" name="idNumber"
+												placeholder="Id-card No."
+											 class="form-last-name form-control" id="idNumber" />
+										</div>
+
+
+										<div class="form-group">
+											<label class="sr-only" for="mobile">Mobile No.</label> <input
+												type="text" name="mobile" placeholder="Mobile No."
+												required="required" class="form-last-name form-control" id="mobile" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="email">Email</label> <input
+												type="text" name="email" placeholder="Email"
+												required="required" class="form-email form-control" id="email" />
+										</div>
+										<div class="form-group">
+											<div class="input-group date" data-provide="datepicker">
+												<input type="text" class="form-control"
+													value="Travelling Date" style="height: 50px" />
+												<div class="input-group-addon">
+													<span class="glyphicon glyphicon-th"></span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="username">Username</label> <input
+												type="text" name="username" placeholder="Username"
+												required="required" class="form-email form-control"
+												id="username" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="password">Password</label> <input
+												type="password" name="password" placeholder="Password"
+												class="form-email form-control"
+												id="password" />
+										</div>
+
+
+									</div>
+
+									<button type="submit" class="btn">Add new User</button>
+								</form>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+
+					<p>Copyright 2016 &copy; HMM-Projects. All rights reserved.</p>
+
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-datepicker.min.js"></script>
+
+</body>
+
+</html>

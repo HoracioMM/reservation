@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- properties -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/airline</property>
+		<property name="hibernate.default_scheml">airline</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- User login details -->
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">Matis200</property>
+
+		<!-- list of XML mapping -->
+		<mapping class="model.Account" />
+		<mapping class="model.Badge" />
+		<mapping class="model.Qr" />
+		<mapping class="model.TravelAgency" />
+		<mapping class="model.Traveller" />
+		<mapping class="model.UserProfile" />
+		<mapping class="model.WantedPerson" />
+		<mapping class="model.Country" />
+		<mapping class="model.Flight" />
+		<mapping class="model.Admin" />
+	</session-factory>
+</hibernate-configuration>

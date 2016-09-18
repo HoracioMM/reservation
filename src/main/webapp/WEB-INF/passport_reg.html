@@ -1,0 +1,187 @@
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Passport Registration Form</title>
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" />
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="assets/bootstrap/css/bootstrap-datepicker.min.css" />
+<link rel="stylesheet"
+	href="assets/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/form-elements.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+
+
+<!-- Favicon and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="assets/ico/apple-touch-icon-144-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="assets/ico/apple-touch-icon-114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="assets/ico/apple-touch-icon-72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed"
+	href="assets/ico/apple-touch-icon-57-precomposed.png" />
+
+
+
+
+
+</head>
+
+<body>
+	<div class="top-content">
+		<div class="inner-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text">
+						<h1>
+							<strong>Passport</strong> - Access Form
+						</h1>
+						<div class="description">
+							<p>
+								Through this form you only can gain access with a <strong>passport</strong>.
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-8 col-sm-offset-2 text">
+						<h3>Please enter the following details</h3>
+
+					</div>
+				</div>
+
+				<div class="form-bottom">
+					<form role="form" action="" method="post" class="registration-form">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="sr-only" for="pasportNr">Passport Number</label> <input
+									type="text" name="pasportNr" placeholder="Passport Number"
+									class="form-username form-control" id="pasportNr" />
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="firstName">First name</label> <input
+									type="text" name="firstName" placeholder="First name"
+									class="form-first-name form-control" id="firstName" />
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="lastName">Last name</label> <input
+									type="text" name="lastName" placeholder="Last name"
+									class="form-last-name form-control" id="lastName" />
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="address">Address</label> <input
+									type="text" name="address" placeholder="Address"
+									class="form-last-name form-control" id="address" />
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="sr-only" for="city">City</label> <input
+									type="text" name="city" placeholder="City"
+									class="form-last-name form-control" id="city" />
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="postalcode">PostalCode</label> <input
+									type="text" name="postalcode" placeholder="Postal Code"
+									class="form-email form-control" id="postalcode" />
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="country">Country</label> <input
+									type="text" name="country" placeholder="Country"
+									class="form-last-name form-control" id="country" />
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="email">Email</label> <input
+									type="text" name="email" placeholder="Email"
+									class="form-email form-control" id="email" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="form-file" style="font-weight: normal">Upload
+								scanned copy of your passport </label> <input type="file"
+								name="form-file" class="form-control" id="form-file"
+								style="height: 40px" />
+						</div>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="form-group">
+									<select class="form-control" style="height: 40px">
+										<option>Select flight name</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<div class="input-group date" data-provide="datepicker">
+										<input type="text" class="form-control"
+											value="Travelling Date" style="height: 40px" />
+										<div class="input-group-addon">
+											<span class="glyphicon glyphicon-th"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-offset-1">
+								<div class="form-group">
+									<div class="input-group date" data-provide="datepicker">
+										<input type="text" class="form-control"
+											value="Airport Visiting Date" style="height: 40px" />
+										<div class="input-group-addon">
+											<span class="glyphicon glyphicon-th"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="btn" style="background-color: green">Sign
+							Up!</button>
+					</form>
+				</div>
+
+				<br></br>
+				<div>
+					<a href="index" class="btn btn-info" role="button">Main Page</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+
+					<p>Copyright 2016 &copy; HMM-Projects. All rights reserved.</p>
+
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-datepicker.min.js"></script>
+	<!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+</body>
+
+
+</html>

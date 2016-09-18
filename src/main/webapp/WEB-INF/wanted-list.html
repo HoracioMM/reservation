@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=10/" />
+<title>Wanted List</title>
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" />
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="assets/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/form-elements.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- Favicon and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="assets/ico/apple-touch-icon-144-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="assets/ico/apple-touch-icon-114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="assets/ico/apple-touch-icon-72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed"
+	href="assets/ico/apple-touch-icon-57-precomposed.png" />
+</head>
+
+<body>
+	<!-- Top content -->
+	<div class="top-content">
+		<div class="inner-bg">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text">
+						<h1>
+							<strong>Wanted People List</strong> <br></br> <span
+								th:text="${error}"></span>
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div class="form-bottom">
+				<div class="generic-container">
+					<div>
+						<div class="col-md-12">
+							<div class="panel panel-default">
+								<table id="table" class="table table-hover">
+									<thead>
+										<tr>
+											<th>First Name</th>
+											<th>Last name</th>
+											<th>city</th>
+											<th>Country</th>
+											<th>Email</th>
+											<th>ID card number</th>
+											<th>Passport number</th>
+											<th>Mobile Number</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="w : ${wanted}">
+											<td><p th:text="${w.getFirstname()}">FN</p></td>
+											<td><p th:text="${w.getLastname()}">LN</p></td>
+											<td><p th:text="${w.getCity()}">CTY</p></td>
+											<td><p th:text="${w.getCountry()}">CNT</p></td>
+											<td><p th:text="${w.getEmail()}">EM</p></td>
+											<td><p th:text="${w.getIdCardNr()}">ID</p></td>
+											<td><p th:text="${w.getPasportNr()}">PP</p></td>
+											<td><p th:text="${w.getMobileNr()}">MB</p></td>
+											<td><a href="" class="btn btn-success 
+ 
+custom-width">edit</a></td>
+											<td><a
+												href="<th:url value='/delete-user-${user.ssoId}' />"
+												class="btn btn-danger 
+ 
+custom-width">delete</a></td>
+										</tr>
+										</th:each>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>First Name</th>
+											<th>Last name</th>
+											<th>city</th>
+											<th>Country</th>
+											<th>Email</th>
+											<th>ID card number</th>
+											<th>Passport number</th>
+											<th>Mobile Number</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<div class="well">
+								<a href="<c:url value='/newuser' />">Add New Wanted Person</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<p>Copyright 2016 &copy; HMM-Projects. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Javascript -->
+	<script src="./assets/js/jquery-1.11.1.min.js"></script>
+	<script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./assets/js/scripts.js"></script>
+
+</body>
+
+</html>

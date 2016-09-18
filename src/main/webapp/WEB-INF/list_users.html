@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Passport Registration Form</title>
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" />
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="assets/bootstrap/css/bootstrap-datepicker.min.css" />
+<link rel="stylesheet"
+	href="assets/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/form-elements.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+
+<!-- Favicon and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="assets/ico/apple-touch-icon-144-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="assets/ico/apple-touch-icon-114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="assets/ico/apple-touch-icon-72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed"
+	href="assets/ico/apple-touch-icon-57-precomposed.png" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Users List</title>
+
+</head>
+<body>
+	<div class="top-content">
+		<div class="inner-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text">
+						<h1>
+							<!--If there's an attribute "error" in my html page, I'd like to show it: -->
+							<strong>Users List</strong><br></br> <span th:text="${error}"></span>
+						</h1>
+
+					</div>
+				</div>
+
+				<div class="form-bottom">
+					<div class="generic-container">
+						<div class="panel panel-default">
+							<!-- Default panel contents -->
+
+							<table id="table" class="table table-hover">
+								<thead>
+									<tr>
+										<th>First Name</th>
+										<th>Last name</th>
+										<th>city</th>
+										<th>Country</th>
+										<th>Email</th>
+										<th>ID card number</th>
+										<th>Passport number</th>
+										<th>Mobile Number</th>
+										<th>Edit</th>
+									</tr>
+								</thead>
+								<tbody>
+								<tr th:each="t : ${travelers}">
+										<td><p th:text="${t.getFirstname()}">FN</p></td>
+										<td><p th:text="${t.getLastname()}">LN</p></td>
+										<td><p th:text="${t.getCity()}">CTY</p></td>
+										<td><p th:text="${t.getCountry()}">CNT</p></td>
+										<td><p th:text="${t.getEmail()}">EM</p></td>
+										<td><p th:text="${t.getIdCardNr()}">ID</p></td>
+										<td><p th:text="${t.getPasportNr()}">PP</p></td>
+										<td><p th:text="${t.getMobileNr()}">MB</p></td>
+										<td><a th:href="@{edit-user(user=${t.getTravellerId()})}"
+											class="btn btn-info">Edit</a> <a
+											th:href="@{delete-user(id=${t.getTravellerId()})}"
+											class="btn btn-info" style="background-color: red">Delete</a></td>
+									</tr>
+								</tbody>
+									<tfoot>
+									<tr>
+										<th>First Name</th>
+										<th>Last name</th>
+										<th>city</th>
+										<th>Country</th>
+										<th>Email</th>
+										<th>ID card number</th>
+										<th>Passport number</th>
+										<th>Mobile Number</th>
+										<th></th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+						<div class="well">
+							<a href="<c:url value='/newuser' />">Add New User</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+
+					<p>Copyright 2016 &copy; HMM-Projects. All rights reserved.</p>
+
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 	<script src="assets/js/scripts.js"></script> -->
+	<script src="assets/bootstrap/js/bootstrap-datepicker.min.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,21 @@
+PROBBLEMS
+---------
+
+-Wanted persons must be in the table wantedperson and when someone registers with this name the comparison is made 
+-vWhen an user has credits on his account he shoot get directly his QR-code 
+-When an user has NO credits on his account he shoot get A warning when trying to push the button "get your qr-code"
+-There is no connection with the database from badge_reg --> Nothing happens 
+-Where is the connection to th admin page???
+
+-Login Controller has 2 methods that returns null
+
+          AccountId does not correspont with any Traveller
+
+          if (username.equalsIgnoreCase("admin"))
+          
+-Maybe use an enum for UserType 
+ 
+RESOLVED
+--------
+
+-New user can be created from id_card_reg  and passport_reg  

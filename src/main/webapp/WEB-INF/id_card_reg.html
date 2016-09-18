@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>id_card_registration</title>
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" />
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="assets/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/form-elements.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet"
+	href="assets/bootstrap/css/bootstrap-datepicker.min.css" />
+
+<!-- Favicon and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="assets/ico/apple-touch-icon-144-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="assets/ico/apple-touch-icon-114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="assets/ico/apple-touch-icon-72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed"
+	href="assets/ico/apple-touch-icon-57-precomposed.png" />
+
+</head>
+
+<body>
+
+	<!-- Top content -->
+	<div class="top-content">
+
+		<div class="inner-bg">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text">
+						<h1>
+							<strong>Id-Card</strong> - Registration Form
+						</h1>
+						<div class="description">
+							<p>
+								Through this form you can only register with your <strong>id-card</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+
+					<div class="col-sm-2"></div>
+
+					<div class="col-sm-8">
+
+						<div class="form-box">
+
+							<div class="form-top">
+								<div class="form-top-left">
+									<h3>Register now</h3>
+									<p>Fill in the form below to get your QR-code</p>
+								</div>
+								<div class="form-top-right">
+									<i class="fa fa-pencil"></i>
+								</div>
+							</div>
+							<div class="form-bottom">
+
+								<!--     <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post"> -->
+								<!--     	<p>Id: <input type="text" th:field="*{id}" /></p> -->
+								<!--         <p>Message: <input type="text" th:field="*{content}" /></p> -->
+								<!--         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p> -->
+								<!--     </form> -->
+
+								<form role="form" th:action="@{login-native}" method="post"
+									class="registration-form">
+									<div>
+										<h3>Is this your fist time? Download first the software</h3>
+										<a
+											href="https://downloads.services.belgium.be/eid/Belgium-eID-QuickInstaller-4.1.18-signed.exe"
+											class="btn btn-info" role="button">Download HERE!</a>
+										<a href="#" class="btn btn-info" role="button">Card Reader
+											Connection</a>
+
+									</div>
+									<br />
+									
+										<h3>Manual input in case of no id-card reader</h3>
+									
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="sr-only" for="firstName">First
+												name</label> <input type="text" name="firstName"
+												placeholder="First name"
+												class="form-first-name form-control" id="firstName" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="lastName">Last name</label>
+											<input type="text" name="lastName" placeholder="Last name"
+												class="form-last-name form-control" id="lastName" />
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="address">Address</label> <input
+												type="text" name="address" placeholder="Address"
+												class="form-last-name form-control" id="address" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="-city">City</label> <input
+												type="text" name="city" placeholder="City"
+												class="form-last-name form-control" id="city" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="postalcode">PostalCode</label> <input
+												type="text" name="postalcode" placeholder="Postal Code"
+												class="form-email form-control" id="postalcode" />
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="country">Country</label> <input
+												type="text" name="country" placeholder="Country"
+												class="form-last-name form-control" id="country" />
+										</div>
+
+
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="sr-only" for="idCardNr">Id-card No.</label>
+											<input type="text" name="idCardNr" placeholder="Id-card No."
+												class="form-last-name form-control" id="idCardNr" />
+										</div>
+
+
+										<div class="form-group">
+											<label class="sr-only" for="mobileNr">Mobile No.</label> <input
+												type="text" name="mobileNr" placeholder="Mobile No."
+												class="form-last-name form-control" id="mobileNr" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="email">Email</label> <input
+												type="text" name="email" placeholder="Email"
+												class="form-email form-control" id="email" />
+										</div>
+										<div class="form-group">
+											<div class="input-group date" data-provide="datepicker">
+												<input type="text" class="form-control"
+													value="Travelling Date" style="height: 50px" />
+												<div class="input-group-addon">
+													<span class="glyphicon glyphicon-th"></span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="username">Username</label> <input
+												type="text" name="username" placeholder="Username"
+												class="form-email form-control" id="username" />
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="password">Password</label> <input
+												type="password" name="password" placeholder="Password"
+												class="form-email form-control" id="password" />
+										</div>
+
+
+									</div>
+
+									<button type="submit" class="btn">Submit</button>
+								</form>
+							</div>
+							<br></br>
+							<div>
+								<a href="index" class="btn btn-info" role="button">Main Page</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2">
+
+					<p>Copyright 2016 &copy; HMM-Projects. All rights reserved.</p>
+
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!--  <script src="assets/js/scripts.js"></script> -->
+	<script src="jquery-1.12.4.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-datepicker.min.js"></script>
+
+</body>
+
+</html>
